@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jun 28 16:47:30 2024
-
 @author: oscar
+
+This module implements a Multilayer Perceptron from scratch to classify 
+handwritten digits, a classical example in the field of Deep Learning. The 
+training examples are the ones in the famous MNIST database, available 
+originally here http://yann.lecun.com/exdb/mnist/. 
+
+The classifier obtains a 97.71% accuracy on the MNIST test set, which is 
+in line with the results of other classifiers employing a similar strategy.
 """
+
 import itertools 
 from pathlib import Path
 import numpy as np
