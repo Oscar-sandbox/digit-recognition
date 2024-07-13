@@ -6,15 +6,15 @@ Created on Fri Jun 28 16:47:30 2024
 """
 import itertools 
 from pathlib import Path
-
 import numpy as np
 
 
 def get_data():
     '''Data originally from: http://yann.lecun.com/exdb/mnist/
-    Contains labeled images of handwritten digits. The training set contains 
-    60k images, while testing set contains 10k images. Each image is in 
-    grayscale and is 28x28 pixels.
+    Consists of labeled images of handwritten digits. The training set contains 
+    60k images, while the testing set contains 10k images. Each image is in 
+    grayscale and is 28x28 pixels. These are converted into vectors of length
+    28x28=784, with entries in the interval [0,1]. 
     '''
     
     data = dict()
@@ -43,7 +43,7 @@ def sigmoid_diff(x):
 
 class MLPClassifier:
     def __init__(self, layer_sizes):
-        '''Creates Multi-layered perceptron.  
+        '''Creates a Multilayer Perceptron Classifier.  
 
         Parameters
         ----------
@@ -116,13 +116,13 @@ class MLPClassifier:
             List of weight matrices, where dW[i] represents the derivative of 
             the cost function with respect to the weights in self.W[i].
         db : list[numpy.ndarray]
-            List of bais vectors, where db[i] represents the derivative of 
+            List of bias vectors, where db[i] represents the derivative of 
             the cost function with respect to the biases in self.b[i].
         '''
         
         dW, db = self._initialize_parameters()
-        z = [None] # z^l = W^l @ a^{l-1} + b^l
-        a = [x]    # a^l = sigmoid(z^l) 
+        z = [None] # z^l = W^l @ a^{l-1} + b^l (input)
+        a = [x]    # a^l = sigmoid(z^l)        (output)
         
         for l in range(1, self.depth):
             z.append(self.W[l] @ a[l-1] + self.b[l])
@@ -153,11 +153,12 @@ class MLPClassifier:
             Number of steps taken in the training process. The default is 100.
         alpha : float, optional
             Learning rate, where 0 < alpha < 1. Lower values of alpha yield 
-            more precise results at a slower pace. The default is 0.1.
+            more precise results, but require a higher number of steps. The 
+            default is 0.1.
         sgd_percent : float, optional
             Percent of the training examples used during stochastic gradient 
-            descent. Higher values of alpha yield more precise results at a 
-            slower pace. The default is 0.05.
+            descent. Higher values of sgd_percent yield more precise results, 
+            but each step requires more time to compute. The default is 0.05.
 
         Returns
         -------
@@ -167,7 +168,6 @@ class MLPClassifier:
         self.train_stats['steps'] = steps
         self.train_stats['alpha'] = alpha
         self.train_stats['sgd_percent'] = sgd_percent
-        
         sample_size = int(sgd_percent * len(X))
         
         for step in range(steps):
@@ -194,16 +194,17 @@ class MLPClassifier:
         Parameters
         ----------
         x : numpy.ndarray
-            Training example to be fed to the MLP Classifier. len(x) must be 
+            Testing example to be fed to the MLP Classifier. len(x) must be 
             equal to the number of neurons on the first layer. 
 
         Returns
         -------
         dist : numpy.ndarray
             Probability distribution of the classification, where dist[i] 
-            equals the probability that the training example x has label i. 
-            The final decision of the classifier is numpy.argmax(dist). 
+            equals the probability that i is the label of x. The final
+            decision of the classifier is argmax(dist). 
         '''
+        
         for l in range(1, self.depth):
             x = sigmoid((self.W[l] @ x) + self.b[l])
         dist = np.exp(x) / np.exp(x).sum()
