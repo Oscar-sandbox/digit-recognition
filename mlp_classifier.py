@@ -229,8 +229,12 @@ dist = np.array([nn.predict(x) for x in data['test-images']])
 preds = np.argmax(dist, axis=1)
 accuracy = (preds == data['test-labels']).sum() / preds.size 
 
-# Accuracy of 97.71% achieved after 20k steps with learning rate 0.1, using 
-# stochastic gradient descent with 5% of training examples. 
+# Accuracy of 97.71% was achieved on the MNIST test set (10k examples) 
+# with a 3-layer MLP with 89 hidden neurons. Weights and biases were
+# initialized uniformly at random from the interval [-0.05, 0.05]. 
+# The training process lasted for 20k steps at a learning rate of 0.1, 
+# where stochastic gradient descent was employed with 5% out of the 60k
+# training examples. 
 '''
 
 
