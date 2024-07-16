@@ -2,6 +2,7 @@
   <img src="data/portada.jpg" />
 </p>
 
+![License](https://img.shields.io/github/license/Oscar-sandbox/digit-recognition)
 ![Python version](https://img.shields.io/badge/python-3.11-blue.svg) 
 ![Numpy version](https://img.shields.io/badge/numpy-1.24.3-blue.svg)
 
