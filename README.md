@@ -38,7 +38,7 @@ employing a similar strategy.
 
 
 <p align="center">
-  <img src="results/learning_curve.png" width=50% />
+  <img src="results/learning_curve.png" width="640" />
 </p>
 
 > [!NOTE]
