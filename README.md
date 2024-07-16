@@ -33,4 +33,6 @@ for 20k steps at a constant learning rate of 0.1, where stochastic gradient desc
 training examples. These results are in line with the results of other classifiers 
 employing a similar strategy.
 
-![Learning curve](results/learning_curve.png)
+<p align="center">
+  <img src="results/learning_curve.png" />
+</p>
