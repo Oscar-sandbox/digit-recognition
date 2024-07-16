@@ -13,7 +13,7 @@ many libraries already offer classifiers of this type, there is value in underst
 the mathematics underlying these structures, as this allows for greater control of the networks' 
 parameters and their learning process. 
 
-# About the Training Set
+## About the Training Set
 
 As with any other classifier in Deep Learning, we need a vast database of existing 
 examples to feed to the classifier. Luckily, training examples for this 
@@ -22,15 +22,14 @@ database contains a training set with 60k images, and a testing set with 10k
 images. Each image is in grayscale, is 28x28 pixels in size and is labeled with 
 its corresponding digit from 0 to 9. 
 
-# Results
+## Results
 
 An accuracy of 97.71% was achieved on the MNIST test set (10k examples) 
-with a 3-layer MLP Classifier with 89 hidden neurons. Weights and biases were
-initialized uniformly at random from the interval [-0.05, 0.05]. 
-The training process lasted for 20k steps at a constant learning rate of 0.1, 
-where stochastic gradient descent was employed with 5% out of the 60k
+with a 3-layer MLP Classifier with 89 hidden neurons. The training process lasted 
+for 20k steps at a constant learning rate of 0.1, where stochastic gradient descent was employed with 5% out of the 60k
 training examples. These results are in line with the results of other classifiers 
 employing a similar strategy.
 
 > [!NOTE]
-> Accuracy 97.71%.
+> Accuracy is greatly impacted by the initial values in the weight matrices and
+> bias vectors. The accuracy achieved picked these uniformly at random from the interval [-1,1]. 
