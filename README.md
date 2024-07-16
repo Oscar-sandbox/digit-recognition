@@ -1,4 +1,4 @@
-![ ](data/portada.jpg)
+![Portada](data/portada.jpg)
 
 # Digit Recognition with Deep Learning
 
@@ -30,6 +30,4 @@ for 20k steps at a constant learning rate of 0.1, where stochastic gradient desc
 training examples. These results are in line with the results of other classifiers 
 employing a similar strategy.
 
-> [!NOTE]
-> Accuracy is greatly impacted by the initial values in the weight matrices and
-> bias vectors. The accuracy achieved picked these uniformly at random from the interval [-1,1]. 
+![Learning curve](results/learning_curve.jpg)
