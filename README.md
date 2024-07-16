@@ -1,4 +1,6 @@
-![Portada](data/portada.jpg)
+<p align="center">
+  <img src="data/portada.jpg" />
+</p>
 
 ![Python version](https://img.shields.io/badge/python-3.11-blue.svg) 
 ![Numpy version](https://img.shields.io/badge/numpy-1.24.3-blue.svg)
