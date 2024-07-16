@@ -33,7 +33,6 @@ def get_data():
 
 
 
-
 ### Example ###
 data = get_data()    
 nn = MLPClassifier([784, 89, 10])
@@ -43,7 +42,6 @@ dist = np.array([nn.predict(x) for x in data['test-images']])
 preds = np.argmax(dist, axis=1)
 accuracy = (preds == data['test-labels']).sum() / preds.size 
     
-
 
 # Accuracy of 97.71% was achieved on the MNIST test set (10k examples) 
 # with a 3-layer MLP with 89 hidden neurons. Weights and biases were
