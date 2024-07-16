@@ -9,7 +9,7 @@ this project aims to construct a classifier for handwritten digits.
 The code implements an artificial neural network object, specifically a multilayer 
 perceptron classifier. The object is equipped with the methods `fit` and `predict`
 to train and test the model, like in other Machine Learning frameworks. Although 
-many libraries already offer classifiers of this type, there is value in understaing 
+many libraries already offer classifiers of this type, there is value in understanding 
 the mathematics underlying these structures, as this allows for greater control of the networks' 
 parameters and their learning process. 
 
@@ -24,10 +24,13 @@ its corresponding digit from 0 to 9.
 
 # Results
 
-An acuracy of 97.71% was achieved on the MNIST test set (10k examples) 
+An accuracy of 97.71% was achieved on the MNIST test set (10k examples) 
 with a 3-layer MLP Classifier with 89 hidden neurons. Weights and biases were
 initialized uniformly at random from the interval [-0.05, 0.05]. 
 The training process lasted for 20k steps at a constant learning rate of 0.1, 
 where stochastic gradient descent was employed with 5% out of the 60k
 training examples. These results are in line with the results of other classifiers 
 employing a similar strategy.
+
+> [!NOTE]
+> Accuracy 97.71%.
