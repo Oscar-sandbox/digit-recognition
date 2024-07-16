@@ -180,7 +180,7 @@ class MLPClassifier:
         Parameters
         ----------
         x : numpy.ndarray
-            Testing example to be fed to the MLP Classifier. len(x) must be 
+            Testing example to be classified. len(x) must be 
             equal to the number of neurons on the first layer. 
 
         Returns
