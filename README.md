@@ -16,8 +16,8 @@ The code implements an artificial neural network object, specifically a multilay
 perceptron classifier. The object is equipped with the methods `fit` and `predict`
 to train and test the model, like in other Machine Learning frameworks. Although 
 many libraries already offer classifiers of this type, there is value in understanding 
-the mathematics underlying these structures, as this allows for greater control of the networks' 
-parameters and their learning process. 
+the mathematics underlying these structures, as this allows for greater control of the network's
+parameters and its learning process. 
 
 ## About the Training Set
 
