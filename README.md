@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="results/portada.jpg" width=100% />
+  <img src="assets/portada.jpg" width=100% />
 </p>
 
 ![License](https://img.shields.io/github/license/Oscar-sandbox/digit-recognition)
