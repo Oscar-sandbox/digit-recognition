@@ -1,4 +1,4 @@
-![ ](results/portada.jpg)
+![ ](data/portada.jpg)
 
 # digit-recognition
 Digit recognition using neural networks from scratch
