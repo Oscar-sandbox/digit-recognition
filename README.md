@@ -42,5 +42,5 @@ employing a similar strategy.
 
 > [!NOTE]
 > Although ~98% is a good accuracy for a classic multilayer perceptron classifier, the
-> state of the art classifiers reach accuracies above 99.77%. For example, convolutional
-> neural networks have proven to be better suited for image recognition tasks than regular MLP's.
+> state of the art classifiers reach accuracies above 99.77%. Convolutional neural networks are one of
+> the preferred models for image recognition tasks like the one covered here. 
